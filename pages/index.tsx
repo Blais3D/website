@@ -12,6 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Hello Avery</title>
       </Head>
+      <h1>Hello Avery Click The Button</h1>
       {count}
       <button onClick={()=> setCount(count + 1)}>
         Increase
