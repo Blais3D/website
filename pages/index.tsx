@@ -2,30 +2,24 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import { brotliDecompressSync } from "zlib";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const [count, setCount] = useState(0);
-  let color = "black";
-  if (count > 5) {
-    color = "red";
-  }
 
-  const color2 = count > 5 ? "red" : "black";
+  const color = count > 5 ? "white" : "pink";
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ background: `${color}` }}>
       <Head>
-        <title>Hello Avery</title>
+        <title>Linwood's Website</title>
       </Head>
-      <h1>Hello Avery Click The Button</h1>
-      <h2>{count}</h2>
-      <button
-        style={{ border: `2px solid ${color2}` }}
-        onClick={() => setCount(count + 1)}
-      >
-        Increase
-      </button>
+      <body>
+        <h1 id="bodyClass">Thank you Theo for teaching me this stuff</h1>
+        <h2>{count}</h2>
+        <button onClick={() => setCount(count + 1)}>Increase</button>
+      </body>
     </div>
   );
 };
