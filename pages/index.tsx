@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   const [count, setCount] = useState(0);
 
-  const color = count > 5 ? "white" : "pink";
+  const color = "rgb(" + (count % 255) + ", " + 150 + ", " + 150 + ")";
 
   return (
     <div className={styles.container} style={{ background: `${color}` }}>
@@ -16,9 +16,11 @@ const Home: NextPage = () => {
         <title>Linwood's Website</title>
       </Head>
       <body>
-        <h1 id="bodyClass">Thank you Theo for teaching me this stuff</h1>
+        <h1>Thank you Theo for teaching me this stuff</h1>
+        <h1>Hello Sam, see you soon!</h1>
+        <h1>Hey Julia!</h1>
         <h2>{count}</h2>
-        <button onClick={() => setCount(count + 1)}>Increase</button>
+        <button onClick={() => setCount(count + 5)}>Increase</button>
       </body>
     </div>
   );
