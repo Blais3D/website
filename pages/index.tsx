@@ -6,12 +6,12 @@ import { brotliDecompressSync } from "zlib";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  const [red, setRed] = useState(0);
-  const [green, setGreen] = useState(0);
-  const [blue, setBlue] = useState(0);
+  const [red, setRed] = useState(255);
+  const [green, setGreen] = useState(255);
+  const [blue, setBlue] = useState(255);
 
   const color =
-    "rgb(" + (red % 255) + ", " + (green % 255) + ", " + (blue % 255) + ")";
+    "rgb(" + (red % 256) + ", " + (green % 256) + ", " + (blue % 256) + ")";
 
   return (
     <div className={styles.container} style={{ background: `${color}` }}>
