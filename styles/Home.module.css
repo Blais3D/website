@@ -1,11 +1,31 @@
+.html {
+  background-color: #171818;
+  color: white;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
 .body {
-  padding-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  place-items: 10px;
+  font: Inter, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+.bodyHeader {
+  padding: 1%;
+  height: 55px;
+  font: Inter, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.h1 {
+  color: #ffb4a2;
+}
+
 .MyButton {
   height: 50px;
   width: 100px;
@@ -13,5 +33,17 @@
   font-size: 12;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
-  background-color: wheat;
+  background-color: #ffb4a2;
 }
+
+/*
+Color Pallet
+Antique White: faebd7 (dark text)
+Apricote: ffcdb2 (dark text)
+Melon: ffb4a2 (dark text)
+Pastel Pink: e5989b (dark text)
+English Lavender: b5838d (light text)
+Onyx: 444648 (light text)
+Erie Black: 171818 (light Text)
+
+*/
