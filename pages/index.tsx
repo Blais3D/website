@@ -1,35 +1,37 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import React from "react";
 import { useState } from "react";
 import { brotliDecompressSync } from "zlib";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
-  const [red, setRed] = useState(255);
-  const [green, setGreen] = useState(255);
-  const [blue, setBlue] = useState(255);
-
-  const color =
-    "rgb(" + (red % 256) + ", " + (green % 256) + ", " + (blue % 256) + ")";
-
+const ColorButton: React.FC<{ count: number; name: string }> = (props) => {
+  const [value, setValue] = useState(props.count);
   return (
-    <div className={styles.container} style={{ background: `${color}` }}>
-      <Head>
-        <title>Linwood's Website</title>
-      </Head>
+    <button className={styles.MyButton} onClick={() => setValue(value + 10)}>
+      {props.name} Has a Value of: {value}
+    </button>
+  );
+};
+
+const Home: NextPage = () => {
+  let r = 0;
+  let g = 0;
+  let b = 0;
+  return (
+    <html>
       <body>
-        <h1>Thank you Theo for teaching me this stuff</h1>
-        <h1>Hello Sam, see you soon!</h1>
-        <h1>Hey Julia!</h1>
-        <h2>Percent red value: {(red % 255) / 255}</h2>
-        <h2>Percent green value: {(green % 255) / 255}</h2>
-        <h2>Percent blue value: {(blue % 255) / 255}</h2>
-        <button onClick={() => setRed(red + 5)}>Increase Red</button>
-        <button onClick={() => setGreen(green + 5)}>Increase Green</button>
-        <button onClick={() => setBlue(blue + 5)}>Increase Blue</button>
+        <div style={{ background: "rgb(" + r + "," + g + "," + b + ")" }}>
+          This is the color you have made!
+        </div>
+        <div className={styles.body}>
+          <ColorButton count={r} name={"Red"}></ColorButton>
+          <ColorButton count={g} name={"Blue"}></ColorButton>
+          <ColorButton count={b} name={"Green"}></ColorButton>
+        </div>
       </body>
-    </div>
+    </html>
   );
 };
 
