@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <title>Welcome!</title>
       </head>
       <body className={styles.bodyHeader}>
-        <img src="/assets/BlaisLogo.png" alt="logo"></img>
+        <img src="public\BlaisLogo.png" alt="logo"></img>
       </body>
       <body className={styles.body}>
         <h1 className={styles.h1}>Welcome To Blais.gg!</h1>

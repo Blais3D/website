@@ -16,8 +16,11 @@
 }
 
 .bodyHeader {
-  padding: 1%;
-  height: 55px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  height: 400px;
+  width: 100%;
   font: Inter, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
